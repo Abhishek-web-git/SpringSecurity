@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<!-- here we use setter and getter method -->
+
+ 
+    <bean class="in.sp.spring.Student" id="stdId">
+    <property name="name" value="Abhishek"></property>
+    <property name="rollno" value="101"></property>
+    <property name="email" value="abhi@gmail.com"></property>
+    <property name="address" ref="addrId"></property>
+    
+    </bean>
+    <bean class="in.sp.spring.Address" id="addrId">
+    <property name="houseno" value="1"></property>
+    <property name="cityname" value="Sitamarhi"></property>
+    <property name="pincode" value="843324"></property>
+    </bean>
+    
+    
+    
+    <!-- here we use constructor method -->
+    <!--  
+    <bean class="in.sp.spring.Student" id="stdId">
+    <constructor-arg value="Abhishek Raj"/>
+    <constructor-arg value="100"/>
+    <constructor-arg value="abhiraj@gmaill.com"/>
+    <constructor-arg ref="addrId"/>
+    </bean>
+    
+    <bean class="in.sp.spring.Address" id="addrId">
+    <constructor-arg value="Bihar"/>
+    <constructor-arg value="2"/>
+    <constructor-arg value="843324"/>
+    
+    </bean>
+    -->
+    
+
+</beans>
